@@ -1,0 +1,17 @@
+Dart -
+    designed for client development {web and mobile apps}
+    can also be used to build server and desktop applications. {how?}
+
+Dart - 
+    is an object-oriented,
+    class-based,
+    garbage-collected language with C-style syntax.
+    
+Dart -
+    can compile to either native code 
+    or JavaScript. 
+    It supports interfaces,
+    mixins,
+    abstract classes,
+    reified generics,
+    and type inference.
