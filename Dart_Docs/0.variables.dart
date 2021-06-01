@@ -1,5 +1,3 @@
-// import 'dart:svg';
-
 void main() {
   var name = 'Bob';
   Object age = 13;
