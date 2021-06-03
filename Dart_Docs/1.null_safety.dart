@@ -1,3 +1,4 @@
+late int linecount;
 void main() {
   // var lineCount; // can accept null value output --> true
 

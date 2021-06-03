@@ -6,16 +6,19 @@ final String nickname = 'Bobby';
 void main() {
   //###sample 1
   const bar = 1000000; // works
-  // final bar = 1000000; // fails
-  final double atm = 1.01325 * bar; // works
+  // final bar = 1000000; // fails but why??
+  // Note: Although a final object cannot be modified, its fields can be changed.
+  //In comparison, a const object and its fields cannot be changed: they’re immutable.
+  const double atm = 1.01325 * bar; // works
   // const double atm = 1.01325 * bar; // works
   print(atm);
 
   var foo = const []; //works
   // var foo = []; //works
 
-  // final bar = const []; //immutable
-  // const baz = []; // immutable
+  // final foo = const []; //immutable
+  // const foo = []; // immutable // but the values can be changed? so whats the point?
+
   foo = [1, 2, 3];
   print(foo);
   foo = [3, 2, 1];
