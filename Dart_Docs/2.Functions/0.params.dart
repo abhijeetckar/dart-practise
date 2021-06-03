@@ -7,11 +7,44 @@ void main() {
 
   ;
   enableFlags(bold: true, hidden: false); //true,false
-  enableFlags(); //null,null
+  enableFlags(); //null,null {default value}
 
-//Named parameters are optional unless they’re specifically marked as required.
-//use required to indicate that the parameter is mandatory
+  //Named parameters are optional unless they’re specifically marked as required.
+  //use required to indicate that the parameter is mandatory
 
-// e.g.
-//const Scrollbar({Key? key, required Widget child})
+  // e.g.
+  //const Scrollbar({Key? key, required Widget child})
+
+  /*
+    Wrapping a set of function parameters in [] marks them as
+    optional positional parameters:
+  */
+
+  String say(String from, String msg, [String? device]) {
+    var result = '$from says $msg';
+    if (device != null) {
+      result = '$result with a $device';
+    }
+    return result;
+  }
+
+  print(say('Bob', 'Howdy') == 'Bob says Howdy');
+  print(say('Bob', 'Howdy', 'smoke signal') ==
+      'Bob says Howdy with a smoke signal');
+
+  // Default values
+
+  void enableFlag({bool bold = false, bool hidden = false}) {}
+  enableFlag(bold: true); //bold will be true; hidden will be false.
+
+  void doStuff(
+      {List<int> list = const [1, 2, 3],
+      Map<String, String> gifts = const {
+        'first': 'paper',
+        'second': 'cotton',
+        'third': 'leather'
+      }}) {
+    print('list:  $list');
+    print('gifts: $gifts');
+  }
 }
