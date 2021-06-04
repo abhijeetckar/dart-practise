@@ -1,4 +1,4 @@
-void main() {
+void main(List<String> arguments) {
   void enableFlags({bool? bold, bool? hidden}) {
     print(bold);
     print(hidden);
@@ -47,4 +47,11 @@ void main() {
     print('list:  $list');
     print('gifts: $gifts');
   }
+
+// Run the app like this: dart args.dart 1 test
+  print(arguments);
+
+  print(arguments.length == 2);
+  print(int.parse(arguments[0]) == 1);
+  print(arguments[1] == 'test');
 }
